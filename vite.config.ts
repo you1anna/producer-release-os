@@ -1,20 +1,14 @@
 /// <reference types="vitest/config" />
-import path from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-// The file: dependency on design-system brings its own node_modules/react along;
-// alias both entry points to this app's copy so hooks see a single React.
-const dedupeReact = {
-  react: path.resolve(__dirname, 'node_modules/react'),
-  'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
-};
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
+    // @you1anna/design-system declares react/react-dom as peers and ships no
+    // node_modules, so this app already resolves a single React. dedupe keeps
+    // that guarantee and guards the duplicate-React "Invalid hook call" failure.
     dedupe: ['react', 'react-dom'],
-    alias: dedupeReact,
   },
   test: {
     environment: 'jsdom',

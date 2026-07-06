@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
-import { Badge, Button, Calendar, Dialog, Input, Stack, Table } from 'design-system';
-import type { CalendarDay } from 'design-system';
+import { Badge, Button, Calendar, Dialog, Input, Stack, Table } from '@you1anna/design-system';
+import type { CalendarDay } from '@you1anna/design-system';
 import type { AppStateHandle } from '../hooks/useAppState';
 import type { Release } from '../domain/types';
 

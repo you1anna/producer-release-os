@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Badge, Button, Input, Progress, Select, Stack, Table } from 'design-system';
-import type { BadgeTone } from 'design-system';
+import { Badge, Button, Input, Progress, Select, Stack, Table } from '@you1anna/design-system';
+import type { BadgeTone } from '@you1anna/design-system';
 import type { AppStateHandle } from '../hooks/useAppState';
 import { TRACK_STAGES, type TrackStage } from '../domain/types';
 

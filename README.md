@@ -2,7 +2,7 @@
 
 A free, local-first planning tool for producers and DJs: release calendar, track pipeline,
 studio reset checklist, and gig prep — built as the first real consumer of the
-[`design-system`](../design-system) rails.
+[`@you1anna/design-system`](../design-system) rails.
 
 Everything stays in your browser (`localStorage`). No account, no backend, no tracking, no cost.
 
@@ -18,23 +18,42 @@ Data actions: **Export JSON** (backup/share), **Import JSON**, **Print / PDF** (
 ## Run
 
 ```bash
-npm install        # also links ../design-system via file: dependency
+npm install        # installs @you1anna/design-system (see dependency note below)
 npm run dev        # local dev server
 npm run test       # vitest (jsdom)
 npm run build      # typecheck + production bundle
 npm run preview    # serve the production build
 ```
 
+### design-system dependency
+
+This app consumes `@you1anna/design-system` as a **package**, not a `file:../design-system`
+source link (the old link nested a second React copy → "Invalid hook call"). Until the library
+is published to GitHub Packages, the dep is pinned to a locally-built tarball:
+
+```
+"@you1anna/design-system": "file:../design-system/you1anna-design-system-0.2.0.tgz"
+```
+
+Rebuild it in the library (`npm run build && npm pack` in `../design-system`) then reinstall
+here if the library changes. **After the v0.2.0 registry publish** (Robin-gated), flip the dep to
+the registry semver — a one-line change; `.npmrc` already maps the scope + `NODE_AUTH_TOKEN`:
+
+```
+"@you1anna/design-system": "^0.2.0"
+```
+
 ## Architecture notes
 
 - Vite + React 18 + TypeScript SPA; **no auth, no backend, no payments** by design (v1 scope).
-- All UI comes from `design-system` components and `--ds-*` tokens; app CSS only consumes tokens.
+- All UI comes from `@you1anna/design-system` components and `--ds-*` tokens; app CSS only consumes tokens.
 - State: one versioned `AppState` under the `producer-release-os/v1` localStorage key
   (`src/domain/types.ts`, `src/storage/store.ts`); corrupt/missing state falls back to a seed.
-- The `file:` dependency means design-system changes require `npm run build` there, then
-  reinstall/restart here.
-- Test setup polyfills `localStorage` (Node ≥22's experimental webstorage global shadows jsdom's)
-  and aliases React to a single copy (duplicate-React via the file: link).
+- The design-system dep is a packaged tarball (see the dependency note above): library changes
+  require `npm run build && npm pack` there, then reinstall here.
+- Test setup polyfills `localStorage` (Node ≥22's experimental webstorage global shadows jsdom's).
+  A single React copy is guaranteed by the package shipping react as a peer (no nested
+  node_modules); Vite `resolve.dedupe` guards it.
 
 ## Status
 

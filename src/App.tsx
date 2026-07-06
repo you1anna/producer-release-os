@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Button, Stack, Tabs } from 'design-system';
+import { Button, Stack, Tabs } from '@you1anna/design-system';
 import { useAppState } from './hooks/useAppState';
 import { exportJson, importJson } from './storage/store';
 import { ReleasesView } from './views/ReleasesView';

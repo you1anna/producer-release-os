@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Card, Checkbox, Input, Progress, Stack } from 'design-system';
+import { Button, Card, Checkbox, Input, Progress, Stack } from '@you1anna/design-system';
 import type { AppStateHandle } from '../hooks/useAppState';
 
 export function StudioResetView({ state, update }: AppStateHandle) {
