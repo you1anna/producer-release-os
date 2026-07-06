@@ -20,6 +20,7 @@ Data actions: **Export JSON** (backup/share), **Import JSON**, **Print / PDF** (
 ```bash
 npm install        # installs @you1anna/design-system (see dependency note below)
 npm run dev        # local dev server
+npm run lint       # oxlint
 npm run test       # vitest (jsdom)
 npm run build      # typecheck + production bundle
 npm run preview    # serve the production build
@@ -60,3 +61,8 @@ the registry semver — a one-line change; `.npmrc` already maps the scope + `NO
 Phase 2 of the Producer Release OS plan (see command-center
 `docs/superpowers/plans/2026-07-05-producer-release-os-phase-2.md`). Hosting/public launch is a
 separate, Robin-gated step.
+
+## What agents should avoid
+
+See `AGENTS.md` — in short: no backend/auth/payments (v1 is localStorage-only), and no
+publishing/deploying without asking Robin.

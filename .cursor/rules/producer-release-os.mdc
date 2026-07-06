@@ -1,0 +1,19 @@
+---
+description: producer-release-os rules
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Producer Release OS Rules For Cursor
+
+Thin adapter: read `AGENTS.md` in this repo and the shared contract at
+`~/Projects/command-center/tooling/agent-operating-contract.md` rather than inventing
+tool-specific behaviour.
+
+Key points:
+
+- Gate before commit: `npm run lint`, `npm run test`, `npm run build`.
+- localStorage-only; no backend, auth, or payments in v1.
+- Publishing/hosting/deploying is Robin-gated — ask first.
+- Work directly on `main`; no PRs or feature branches unless asked.
