@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: var(--ds-color-bg-surface);
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-sans);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--ds-space-lg) var(--ds-space-md) var(--ds-space-2xl);
+}
+
+.app-header {
+  padding: var(--ds-space-lg) 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: var(--ds-font-size-2xl);
+  line-height: var(--ds-line-height-tight);
+}
+
+.app-header p {
+  margin: var(--ds-space-xs) 0 0;
+  color: var(--ds-color-text-secondary);
+  font-size: var(--ds-font-size-sm);
+}
+
+.view {
+  padding: var(--ds-space-md) 0;
+}
+
+.app-footer {
+  margin-top: var(--ds-space-2xl);
+  padding-top: var(--ds-space-md);
+  border-top: 1px solid var(--ds-color-border-default);
+}
+
+.empty-state {
+  color: var(--ds-color-text-secondary);
+  font-size: var(--ds-font-size-sm);
+  margin: var(--ds-space-md) 0;
+}

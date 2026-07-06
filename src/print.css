@@ -1,0 +1,16 @@
+@media print {
+  .app-header p,
+  .app-footer,
+  [role='tablist'] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .app {
+    max-width: none;
+    padding: 0;
+  }
+}
