@@ -10,5 +10,5 @@ See `AGENTS.md` for the full agent contract. Quick orientation for Claude Code:
   see `decisions/2026-07-06-design-system-tarball-dependency.md`.
 - **Scope guard:** localStorage-only; no backend, auth, or payments in v1.
 - **Publishing/hosting/deploying** is outward-facing — Robin-gated, ask first.
-- Hub-level context, plans, and cross-repo decisions live in the `command-center` repo
-  (see `docs/README.md` here for pointers).
+- This repo owns its guidance, plans and decisions. Command-center was retired on
+  15 October 2026; its earlier plans for this project are read-only history (see `docs/README.md`).

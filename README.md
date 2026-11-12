@@ -58,7 +58,7 @@ the registry semver — a one-line change; `.npmrc` already maps the scope + `NO
 
 ## Status
 
-Phase 2 of the Producer Release OS plan (see command-center
+Phase 2 of the Producer Release OS plan (historical plan in the retired command-center archive:
 `docs/superpowers/plans/2026-07-05-producer-release-os-phase-2.md`). Hosting/public launch is a
 separate, Robin-gated step.
 

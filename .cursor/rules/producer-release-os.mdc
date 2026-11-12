@@ -7,9 +7,7 @@ alwaysApply: true
 
 # Producer Release OS Rules For Cursor
 
-Thin adapter: read `AGENTS.md` in this repo and the shared contract at
-`~/Projects/command-center/tooling/agent-operating-contract.md` rather than inventing
-tool-specific behaviour.
+Thin adapter: read `AGENTS.md` in this repo rather than inventing tool-specific behaviour.
 
 Key points:
 

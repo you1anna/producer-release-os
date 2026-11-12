@@ -6,8 +6,10 @@ Guidance for AI agents (Codex, Claude, Cursor, …) working in this repo.
 
 - `README.md` — what this is, how to run it, the design-system tarball dependency.
 - This file.
-- `~/Projects/command-center/tooling/agent-operating-contract.md` — the shared cross-tool contract.
 - `decisions/` — durable choices; do not re-litigate.
+
+Command-center was retired on 15 October 2026. Do not load it for guidance; this repo owns its
+plans, status and decisions.
 
 ## Verify changes (the gate)
 
