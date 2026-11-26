@@ -34,6 +34,16 @@ Tests are colocated in `src/` (e.g. `src/App.test.tsx`), not a separate `tests/`
 
 - `node_modules/` and `dist/` are generated — never commit them.
 
+## Public repository
+
+This repository is public. Each commit, commit message, branch and author address is published.
+
+- Do not commit personal data or private intent, for example career, legal, health or money matters.
+- Do not add host paths, machine names, network addresses, credentials, session URLs or names of
+  private repositories.
+- Use the GitHub noreply address as the commit author. Use synthetic data in examples and tests.
+- If you are not sure that content is safe to publish, stop and ask Robin.
+
 ## Git workflow
 
 - Solo personal repo. Commit directly to `main`; no PRs and no feature branches unless

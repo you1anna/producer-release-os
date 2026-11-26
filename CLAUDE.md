@@ -1,6 +1,7 @@
 # CLAUDE.md — producer-release-os
 
-See `AGENTS.md` for the full agent contract. Quick orientation for Claude Code:
+See `AGENTS.md` for the full agent contract. This repository is public: before a commit, obey the
+"Public repository" rules in `AGENTS.md`. Quick orientation for Claude Code:
 
 - **What this is:** a free, local-first planning SPA for producers/DJs (releases, pipeline,
   studio reset, gig prep) — the first real consumer of `@you1anna/design-system`.
