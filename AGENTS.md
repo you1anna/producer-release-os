@@ -8,8 +8,7 @@ Guidance for AI agents (Codex, Claude, Cursor, …) working in this repo.
 - This file.
 - `decisions/` — durable choices; do not re-litigate.
 
-Command-center was retired on 15 October 2026. Do not load it for guidance; this repo owns its
-plans, status and decisions.
+This repo owns its plans, status and decisions.
 
 ## Verify changes (the gate)
 

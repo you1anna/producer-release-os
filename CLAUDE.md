@@ -11,5 +11,5 @@ See `AGENTS.md` for the full agent contract. This repository is public: before a
   see `decisions/2026-07-06-design-system-tarball-dependency.md`.
 - **Scope guard:** localStorage-only; no backend, auth, or payments in v1.
 - **Publishing/hosting/deploying** is outward-facing — Robin-gated, ask first.
-- This repo owns its guidance, plans and decisions. Command-center was retired on
-  15 October 2026; its earlier plans for this project are read-only history (see `docs/README.md`).
+- This repo owns its guidance, plans and decisions. Earlier plans are read-only history (see
+  `docs/README.md`).
